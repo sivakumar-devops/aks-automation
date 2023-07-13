@@ -1,14 +1,14 @@
 trigger:
   branches:
     include:
-      - master
+      - main
 
-# schedules:
-# - cron: "8 13 * * 1-5"
-#   displayName: Daily build (Monday to Friday)
-#   branches:
-#     include:
-#       - master
+schedules:
+- cron: "8 18 * * 1-5"
+  displayName: Daily build (Monday to Friday)
+  branches:
+    include:
+      - main
 
 jobs:
 - job: StopAKSCluster
