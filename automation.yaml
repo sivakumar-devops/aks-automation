@@ -2,13 +2,6 @@ trigger:
   branches:
     include:
       - main
-
-# schedules:
-# - cron: "30 17 * * 1-5"
-#   displayName: Daily build (Monday to Friday)
-#   branches:
-#     include:
-#       - main
       
 jobs:
 - job: StopAKSCluster
@@ -20,4 +13,4 @@ jobs:
       azureSubscription: 'Microsoft Azure Enterprise - Bold BI Dev'  # Replace with the Azure subscription name or service connection
       scriptType: 'bash'
       scriptLocation: 'inlineScript'
-      inlineScript: 'az aks stop --name yokogawa-testing --resource-group dev-kubernetes-boldbi'  # Replace with your AKS cluster and resource group names
+      inlineScript: 'az aks stop --name yokogawa --resource-group yokogawa'  # Replace with your AKS cluster and resource group names
